@@ -6,19 +6,16 @@
     <title>Prueba de checkOnlineStatus</title>
 </head>
 <body>
-    <h1>Consola del Navegador</h1>
+    <h1>Consola del Navegador 2</h1>
 
     <script>
-        function checkOnlineStatus() {
-            if (navigator.onLine) {
-                console.log('Estás en línea');
-            } else {
-                console.log('Estás fuera de línea');
-            }
-        }
+      function pingWithSendBeacon() {
+        const data = new FormData();
+        data.append('ping', 'ping');
 
-        // Llamar a la función para probar
-        checkOnlineStatus();
+        navigator.sendBeacon('https://www.google.com/', data);
+    }
+    pingWithSendBeacon()
     </script>
 </body>
 </html>
