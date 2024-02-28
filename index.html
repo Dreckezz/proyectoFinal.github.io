@@ -1,22 +1,61 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba de checkOnlineStatus</title>
+    <title>Document</title>
+    <!-- USO DE ANIMACIONES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- CONEXION DE HOJA CSS -->
+    <link href="style.css" rel="stylesheet">
+    
 </head>
 <body>
-    <h1>Consola del Navegador 2</h1>
-
-    <script>
-      function pingWithSendBeacon() {
-        const data = new FormData();
-        data.append('ping', 'ping');
-
-        navigator.sendBeacon('https://www.google.com/', data);
-    }
-    pingWithSendBeacon()
-    </script>
+    <div id="saludo" class="saludo">
+        <h1>BIENVENIDO</h1>
+    </div>
+    <div id="contenido" class="oculto">
+        <!-- BARRA SUPERIOR -->
+        <div class="barraSuperior">
+            INNOD
+        </div>
+        <!-- Tabla -->
+        <div id="tabla">
+            <table id="tabla-container">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>URL</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <!-- BOTON PARA ABRIR MODAL -->
+        <div class="contenedorBoton">
+        <button id="btn-abrir-modal">Agregar Datos</button>
+        </div>
+        <!-- CRACION DEL MODAL -->
+        <dialog id="modal" class="modal">
+            <form>
+                <h1>Datos de la Pagina</h1>
+                <hr>
+                <div>
+                    <label>Identificador de Pagina</label>
+                    <input type="text" name="nombre" id="nombre">
+                </div>
+                <div>
+                    <label>Dirección de Pagina</label>
+                    <input type="text" name="url" id="url">
+                </div>
+                <button id="btn-cerrar-modal" type="submit">Enviar</button>
+            </form>
+        </dialog>
+    </div>
+    <!-- CONEXION HOJA DE JS -->
+    <script src="index.js"></script>
 </body>
 </html>
-
