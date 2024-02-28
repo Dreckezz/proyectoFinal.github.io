@@ -56,6 +56,7 @@ var listaDatos = [];
 function agregarFila(identificador, direccion, estado) {
   var containerDiv = document.getElementById('tabla-container');
   var newRow = containerDiv.insertRow(-1);
+  newRow.style.border = "1px solid";
 
   // Añadir celdas para nombre, URL, estado y el botón "X"
   var identificadorCell = newRow.insertCell(0);
