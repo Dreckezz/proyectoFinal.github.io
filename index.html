@@ -3,28 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba de pingWithFetch</title>
+    <title>Prueba de checkOnlineStatus</title>
 </head>
 <body>
     <h1>Consola del Navegador</h1>
 
     <script>
-        function pingWithFetch() {
-            fetch('https://www.google.com')
-                .then(response => {
-                    if (!response.ok) {
-                        console.log('Error al acceder al servidor');
-                    } else {
-                        console.log('Servidor en línea');
-                    }
-                })
-                .catch(error => {
-                    console.log('Error de red');
-                });
+        function checkOnlineStatus() {
+            if (navigator.onLine) {
+                console.log('Estás en línea');
+            } else {
+                console.log('Estás fuera de línea');
+            }
         }
 
         // Llamar a la función para probar
-        pingWithFetch();
+        checkOnlineStatus();
     </script>
 </body>
 </html>
+
