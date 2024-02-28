@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body{
+    background-color: beige;
+    margin: 0px;
+    padding: 0px;
+}
+.saludo{
+    background-color: white;
+    width: 100vw; /* 100% del ancho de la ventana */
+    height: 100vh; /* 100% de la altura de la ventana */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: darkslateblue;
+    font-size: 270%;
+    font-family: Inter;
+}
+.oculto{
+    display: none;
+}
+
+.barraSuperior{
+    display: flex;
+    align-items: center;
+    background-color: blue; 
+    width: 100%; 
+    height: 60px;
+    padding: 0 0 0 30px;
+    margin: 0;
+    color: white;
+    font-family: Inter;
+    font-size: 50px;
+    font-weight: 450;
+    border: solid whitesmoke 0 0 2px 0;
+   
+
+}
+
+#tabla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedorBoton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btn-abrir-modal{
+    margin: 7px 0 0 0;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+
+    
+}
+
+#btn-abrir-modal:hover {
+    background-color: #2980b9;
+}
+
+#modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+}
+.modal div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}  
+.modal h1{
+    margin: 0;
+}
+.modal hr{
+    margin: 5px 0 17px 0;
+}
+
+#modal input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+#modal input:focus {
+    outline: none;
+    border-color: #3498db; /* Azul */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.7);
+}
+#modal label {
+    display: block;
+    color: black;
+    font-size: 16px;
+}
+
+#btn-cerrar-modal {
+    margin: 7px 0 0 0;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#btn-cerrar-modal:hover {
+    background-color: #2980b9;
+}
+table button{
+    background-color: red;
+    color: white;
+    font-family: Inter;
+    font-weight: 800;
+    border: none;
+}
+table button:hover{
+    background-color: darkred;
+}
