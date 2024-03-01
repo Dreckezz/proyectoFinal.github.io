@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- CONEXION DE HOJA CSS -->
     <link href="style.css" rel="stylesheet">
-    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript"> emailjs.init('FQuEQhEdluy1ctWeb') </script>
 </head>
 <body>
     <div id="saludo" class="saludo">
@@ -18,6 +19,14 @@
         <!-- BARRA SUPERIOR -->
         <div class="barraSuperior">
             INNOD
+        </div>
+        <div class="timeSelect">
+            <select id="timeSelect">
+                <option value="Verificar estado y ping" selected>Verificar estado y ping</option>
+                <option value="6000">6 segundos</option>
+                <option value="300000">5 minutos</option>
+                <option value="1800000">30 minutos</option>
+            </select>
         </div>
         <!-- Tabla -->
         <div id="tabla">
@@ -55,7 +64,7 @@
             </form>
         </dialog>
     </div>
-    <!-- CONEXION HOJA DE JS -->
-    <script src="index.js"></script>
+    <script src="ping.js" ></script>
+    <script type="module" src="index.js" ></script>
 </body>
 </html>
